@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box org">
+                <h2 class="heading-text heading-org">ОРГАНИЗАЦИОННО-ПРАВОВЫЕ РИСКИ</h2>
+                <span class="text text-org">Статус компании, массовые адреса, руководители и<br>
+                      учредители, время существования организации</span>
+                <div class="circle circle-org"></div>
+            </div>
+            <div class="box fin li_fin1 li_fin2 li_fin3 li_fin4 li_fin5">
+                <h2 class="heading-text heading-fin ">ФИНАНСЫ</h2>
+                <span class="text text-fin">Непокрытые убытки, основные средства, выручка, убыток,<br>
+                      уставный капитал, кредиторская и дебиторская<br>
+                      задолженности  
+                </span>
+                <div class="circle circle-fin"></div>
+            </div>
+            <div class="box gos li_gos1 li_gos2 li_gos3 li_gos4 li_gos5">
+                <h2 class="heading-text heading-gos">ГОСКОНТРАКТЫ</h2>
+                <span class="text text-gos">
+                    Выигранные, отмененные и исполненные госконтракты
+                </span>
+                <div class="circle circle-gos"></div>
+            </div>
+            <div class="box risk li_risk1 li_risk2 li_risk3 li_risk4 li_risk5">
+                <h2 class="heading-text heading-risk">ДЕЛОВЫЕ РИСКИ</h2>
+                <span class="text text-risk">Сообщения о банкротстве, арбитражные дела, реестр<br>
+                      недобросовестных поставщиков
+                </span>
+                <div class="circle circle-risk"></div>
+            </div>
+        </div>
+        <div class="container_gos">
+            <h3>Госконтракты</h3>
+            <ul class="progressbar_gos">
+                <li class="progresel_gos" id="li_gos1"></li>
+                <li class="progresel_gos" id="li_gos2"></li>
+                <li class="progresel_gos" id="li_gos3"></li>
+                <li class="progresel_gos" id="li_gos4"></li>
+                <li class="progresel_gos" id="li_gos5"></li>
+            </ul>    
+        </div>
+        <div class="container_risk">
+            <h3>Риски</h3>
+            <ul class="progressbar_risk">
+                <li class="progresel_risk" id="li_risk1"></li>
+                <li class="progresel_risk" id="li_risk2"></li>
+                <li class="progresel_risk" id="li_risk3"></li>
+                <li class="progresel_risk" id="li_risk4"></li>
+                <li class="progresel_risk" id="li_risk5"></li>
+            </ul>    
+        </div>
+        <div class="container_fin">
+            <h3>Финансы</h3>
+            <ul class="progressbar_fin">
+                <li class="progresel_fin" id="li_fin1"></li>
+                <li class="progresel_fin" id="li_fin2"></li>
+                <li class="progresel_fin" id="li_fin3"></li>
+                <li class="progresel_fin" id="li_fin4"></li>
+                <li class="progresel_fin" id="li_fin5"></li>
+            </ul>    
+        </div>
+ 
+        <div id="modal" class="modal hide" >
+        	<div class="containerMod">
+        		<h4>Выберите действие</h4>
+        		<input type="hidden" name="modHide" value="">
+        		<ul id="variants">
+        			<li varius="1">Успешно продолжить</li>
+        			<li varius="2">Предупреждение</li>
+        			<li varius="3">Остановка сценария</li>
+        		</ul>
+        	</div>
+        </div>
+
+        <script
+		  src="https://code.jquery.com/jquery-1.12.4.min.js"
+		  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+		  crossorigin="anonymous"></script>
+
+		  <script type="text/javascript" src="script.js"></script>
+          <script type="text/javascript" src="script-risk.js"></script>
+          <script type="text/javascript" src="script-fin.js"></script>
+    </body>
+</html>

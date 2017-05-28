@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.wrapper {
+  width: 960px;
+  height: 200px;
+  margin: 100px auto;
+  position: relative;
+}
+
+.box {
+  width: 460px;
+  height: 140px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.org {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.fin {
+  margin-top: 5px;
+}
+
+.gos {
+  margin-left: 5px;
+}
+
+.heading-text {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-weight: 550;
+}
+
+.heading-org {
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.heading-fin {
+  margin-top: 20px;
+  margin-left: 45px;
+}
+
+.heading-gos {
+  margin-top: 25px;
+  margin-left: 80px;
+}
+
+.heading-risk {
+  margin-top: 25px;
+  margin-left: 45px;
+}
+
+.text {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.text-org {
+  margin-left: 80px;
+}
+
+.text-fin {
+  margin-left: 45px;
+}
+
+.text-gos {
+  margin-left: 80px;
+}
+
+.text-risk {
+  margin-left: 45px;
+}
+
+body .circle-color-lime{
+  border-color: lime;
+}
+
+body .circle-gos-color-orange{
+  border-top: 43px solid transparent !important;
+  border-right: 43px solid transparent !important;
+  border-bottom: 43px solid transparent !important;
+  border-left: 43px solid #ff8d00; 
+}
+
+body .circle-gos-color-red{
+  border-top: 45px solid transparent !important;
+  border-right: 45px solid transparent !important;
+  border-bottom: 45px solid transparent !important;
+  border-left: 45px solid #ff0000; 
+}
+
+body .circle-risk-color-orange{
+  border-top: 43px solid transparent !important;
+  border-right: 43px solid #ff8d00;
+  border-bottom: 43px solid transparent !important;
+  border-left: 43px solid transparent !important; 
+}
+body .circle-risk-color-red{
+  border-top: 45px solid transparent !important;
+  border-right: 45px solid #ff0000;
+  border-bottom: 45px solid transparent !important;
+  border-left: 45px solid transparent !important; 
+}
+
+body .circle-fin-color-orange{
+  border-top: 43px solid transparent !important;
+  border-right: 43px solid #ff8d00;
+  border-bottom: 43px solid transparent !important;
+  border-left: 43px solid transparent !important; 
+}
+
+body .circle-fin-color-red{
+  border-top: 45px solid transparent !important;
+  border-right: 45px solid #ff0000;
+  border-bottom: 45px solid transparent !important;
+  border-left: 45px solid transparent !important; 
+}
+
+.circle-org {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent !important;
+  border-right: 40px solid transparent !important;
+  border-bottom: 40px solid transparent !important;
+  border-left: 40px solid lime;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+}
+
+.circle-fin {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent !important;
+  border-right: 40px solid #ebebeb;
+  border-bottom: 40px solid transparent !important;
+  border-left: 40px solid transparent !important;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+}
+
+.circle-gos {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent !important;
+  border-right: 40px solid transparent !important;
+  border-bottom: 40px solid transparent !important;
+  border-left: 40px solid #ebebeb;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: -40px;
+  right: -40px;
+}
+
+.circle-risk {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent !important;
+  border-right: 40px solid #ebebeb;
+  border-bottom: 40px solid transparent !important;
+  border-left: 40px solid transparent !important;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -40px;
+  left: -40px;
+}
+
+h3 {
+  font-size: 16px;
+  margin-left: 40%;
+  margin-bottom: 20px;
+}
+
+.container_gos {
+  width: 100%;
+}
+
+.progressbar_gos {
+  counter-reset: step;
+  user-select: none;
+}
+
+.progressbar_gos li {
+  font-size: 12px;
+  list-style-type: none;
+  float: left;
+  width: 16.5%;
+  position: relative;
+  text-align: center;
+}
+
+.progressbar_gos li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 3px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.progressbar_gos li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    top: 15px;
+    left: 50%;
+    z-index: -1;
+}
+
+.progressbar_gos li:last-child::after {
+  content: none;
+}
+
+.progressbar_gos li.active {
+  color: green;
+}
+
+.progressbar_gos li.active:before {
+  border-color: green;
+}
+
+.progressbar_gos li.active:after {
+  background-color: green;
+}
+
+.progressbar_gos li.preparing{
+  color: #ff6d02;
+}
+
+.progressbar_gos li.preparing:after {
+  background-color: #ff6d02;
+}
+
+.progressbar_gos li.fail{
+  color: #f00;
+}
+
+.progressbar_gos li.fail:after {
+  background-color: #f00;
+}
+
+.container_risk {
+  width: 100%;
+  position: absolute;
+  top: 500px;
+}
+
+.progressbar_risk {
+  counter-reset: step;
+  user-select: none;
+}
+
+.progressbar_risk li {
+  font-size: 12px;
+  list-style-type: none;
+  float: left;
+  width: 16.5%;
+  position: relative;
+  text-align: center;
+}
+
+.progressbar_risk li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 3px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.progressbar_risk li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    top: 15px;
+    left: 50%;
+    z-index: -1;
+}
+
+.progressbar_risk li:last-child::after {
+  content: none;
+}
+
+.progressbar_risk li.active {
+  color: green;
+}
+
+.progressbar_risk li.active:before {
+  border-color: green;
+}
+
+.progressbar_risk li.active:after {
+  background-color: green;
+}
+
+.progressbar_risk li.preparing{
+  color: #ff6d02;
+}
+
+.progressbar_risk li.preparing:after {
+  background-color: #ff6d02;
+}
+
+.progressbar_risk li.fail{
+  color: #f00;
+}
+
+.progressbar_risk li.fail:after {
+  background-color: #f00;
+}
+
+.container_fin {
+  width: 100%;
+  position: absolute;
+  top: 600px;
+}
+
+.progressbar_fin {
+  counter-reset: step;
+  user-select: none;
+}
+
+.progressbar_fin li {
+  font-size: 12px;
+  list-style-type: none;
+  float: left;
+  width: 16.5%;
+  position: relative;
+  text-align: center;
+}
+
+.progressbar_fin li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 3px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.progressbar_fin li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    top: 15px;
+    left: 50%;
+    z-index: -1;
+}
+
+.progressbar_fin li:last-child::after {
+  content: none;
+}
+
+.progressbar_fin li.active {
+  color: green;
+}
+
+.progressbar_fin li.active:before {
+  border-color: green;
+}
+
+.progressbar_fin li.active:after {
+  background-color: green;
+}
+
+.progressbar_fin li.preparing{
+  color: #ff6d02;
+}
+
+.progressbar_fin li.preparing:after {
+  background-color: #ff6d02;
+}
+
+.progressbar_fin li.fail{
+  color: #f00;
+}
+
+.progressbar_fin li.fail:after {
+  background-color: #f00;
+}
+/*# sourceMappingURL=styles.css.map */
+
+
+.modal{
+  position: fixed;
+  top: 200px;
+  width: 300px;
+  left: 25%;
+  right: 25%;
+  z-index: 10;
+  padding: 20px;
+  border: 1px #333 solid;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px #333;
+  background: #ebebeb;
+}
+
+.modal ul li {
+font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
